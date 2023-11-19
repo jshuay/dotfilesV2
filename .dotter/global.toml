@@ -1,6 +1,5 @@
 [git.files]
-"git/gitconfig" = { target = "~/.gitconfig", type = "template" }
-"git/gitignore" = { target = "~/.gitignore", type = "symbolic" }
+"git" = "~/.config/git"
 
 [git.variables]
 git_email = "jshuay@gmail.com"
