@@ -1,0 +1,5 @@
+[wezterm.files]
+wezterm = { target = "/mnt/c/Users/jshuay/.config/wezterm", type = "template" }
+
+[wezterm.variables]
+wezterm_default_domain = "WSL:Ubuntu"
