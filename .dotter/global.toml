@@ -7,6 +7,3 @@ git_name = "jshuay"
 
 [wezterm.files]
 wezterm = "~/.config/wezterm"
-
-[wezterm.variables]
-wezterm_default_domain = "local"
