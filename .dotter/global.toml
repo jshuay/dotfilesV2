@@ -7,3 +7,12 @@ git_name = "jshuay"
 
 [wezterm.files]
 wezterm = "~/.config/wezterm"
+
+[fish.files]
+fish = "~/.config/fish"
+
+[starship.files]
+starship = "~/.config/starship"
+
+[bin.files]
+bin = "~/bin"

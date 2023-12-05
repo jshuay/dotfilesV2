@@ -1,0 +1,9 @@
+#!/bin/bash
+# https://stackoverflow.com/a/2575525
+exec < /dev/tty
+oldstty=$(stty -g)
+stty raw -echo min 0
+echo -en "\033[6n" > /dev/tty
+IFS=';' read -r -d R -a pos
+stty $oldstty
+echo $((${pos[0]:2} - 1)) $((${pos[1]} - 1))
