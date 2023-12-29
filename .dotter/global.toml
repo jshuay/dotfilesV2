@@ -16,3 +16,6 @@ starship = "~/.config/starship"
 
 [bin.files]
 bin = "~/bin"
+
+[nvim.files]
+nvim = { target = "~/.config/nvim", type = "symbolic" }

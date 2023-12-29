@@ -23,15 +23,18 @@ end)
 return {
     apply = function(config)
         config.color_scheme = "Sagelight (base16)"
-        config.color_scheme = "Ocean (dark) (terminal.sexy)"
+        config.color_scheme = "zenbones_dark"
+        config.color_scheme = "Everforest Dark (Gogh)"
         config.color_scheme = "jmbi (terminal.sexy)"
+        config.color_scheme = "Ocean (dark) (terminal.sexy)"
+        config.color_scheme = "Catppuccin Mocha"
 
         --config.use_fancy_tab_bar = false
         --config.hide_tab_bar_if_only_one_tab = true
         --config.tab_bar_at_bottom = true
         config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
-        config.window_background_opacity = 0.95
+        --config.window_background_opacity = 0.95
 
         config.font_size = 14.0
     end

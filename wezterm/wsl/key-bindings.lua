@@ -111,6 +111,8 @@ return {
                     })
                 },
                 { mods = "CTRL|SHIFT", key = "f", action = action.CopyMode("ClearPattern") },
+                { mods = "NONE", key = "Tab", action = action.CopyMode("NextMatch") },
+                { mods = "SHIFT", key = "Tab", action = action.CopyMode("PriorMatch") },
             }
         }
     end

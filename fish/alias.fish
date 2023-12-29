@@ -8,3 +8,7 @@ end
 if type -q peco
     alias peco "peco --on-cancel error --prompt '>' --layout bottom-up"
 end
+
+alias wp "cd ~/workplace/"
+
+alias vi "nvim"

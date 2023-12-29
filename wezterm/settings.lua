@@ -2,7 +2,7 @@ return {
     apply = function(config)
         config.window_close_confirmation = "NeverPrompt"
         config.audible_bell = "Disabled"
-        config.force_reverse_video_cursor = true
+        --config.force_reverse_video_cursor = true
         config.warn_about_missing_glyphs = false
         config.adjust_window_size_when_changing_font_size = false
         config.scrollback_lines = 10000
