@@ -19,7 +19,7 @@ vim.diagnostic.config({
 })
 
 local symbols = require("symbols").diagnostics
-vim.fn.sign_define('DiagnosticSignError', { text = symbols.ERROR, texthl = 'DiagnosticSignError' })
-vim.fn.sign_define('DiagnosticSignWarn', { text = symbols.WARN, texthl = 'DiagnosticSignWarn' })
-vim.fn.sign_define('DiagnosticSignInfo', { text = symbols.INFO, texthl = 'DiagnosticSignInfo' })
-vim.fn.sign_define('DiagnosticSignHint', { text = symbols.HINT, texthl = 'DiagnosticSignHint' })
+vim.fn.sign_define("DiagnosticSignError", { text = symbols.ERROR, texthl = "DiagnosticSignError" })
+vim.fn.sign_define("DiagnosticSignWarn", { text = symbols.WARN, texthl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignInfo", { text = symbols.INFO, texthl = "DiagnosticSignInfo" })
+vim.fn.sign_define("DiagnosticSignHint", { text = symbols.HINT, texthl = "DiagnosticSignHint" })
