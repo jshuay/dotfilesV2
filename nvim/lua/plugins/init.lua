@@ -20,4 +20,5 @@ require("lazy").setup({
     require("plugins.neoscroll"),
     require("plugins.scrollbar"),
     require("plugins.git"),
+    require("plugins.lualine"),
 })
