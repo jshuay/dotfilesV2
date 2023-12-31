@@ -45,9 +45,5 @@ keymap.set("n", "<LEADER>sb", "zw")
 -- Run formatter
 keymap.set("n", "<LEADER>fmt", "<CMD>lua vim.lsp.buf.format({ async = true })<CR>")
 
--- TODO: move to cmp plugin
--- Show completion menu from Normal mode
---keymap.set("n", "<C-Space>", "i<CMD>lua SHOW_CMP()<CR>")
-
 -- Clear search highlights
 keymap.set("n", "<LEADER>c/", ":noh<CR>")

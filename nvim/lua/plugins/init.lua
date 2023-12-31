@@ -14,4 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     require("plugins.file_explorer.nvim-tree"),
     require("plugins.colorscheme.catppuccin"),
+    require("plugins.treesitter"),
+    require("plugins.completion"),
 })
