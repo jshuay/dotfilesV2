@@ -16,4 +16,5 @@ require("lazy").setup({
     require("plugins.colorscheme.catppuccin"),
     require("plugins.treesitter"),
     require("plugins.completion"),
+    require("plugins.comment"),
 })

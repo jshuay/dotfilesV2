@@ -1,0 +1,19 @@
+return {
+    "numToStr/Comment.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+        require("Comment").setup({
+            toggler = {
+                line = "\\",
+                block = "|"
+            },
+            opleader = {
+                line = "\\",
+                block = "|"
+            },
+            mappings = {
+                extra = false
+            }
+        })
+    end
+}
