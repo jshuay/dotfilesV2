@@ -13,6 +13,8 @@ return {
         local keymap = require("keymap")
         keymap.set("n", "<leader>n", "<cmd>NvimTreeFindFileToggle<CR>")
 
+        local symbols = require("symbols")
+
         require("nvim-tree").setup({
             on_attach = function(bufnr)
                 local api = require("nvim-tree.api")
@@ -33,7 +35,16 @@ return {
             },
             hijack_cursor = true,
             diagnostics = {
-                enable = true
+                enable = true,
+                severity = {
+                    min = vim.diagnostic.severity.HINT
+                },
+                icons = {
+                    hint = symbols.diagnostics.HINT,
+                    info = symbols.diagnostics.INFO,
+                    warning = symbols.diagnostics.WARN,
+                    error = symbols.diagnostics.ERROR
+                }
             },
             ui = {
                 confirm = { default_yes = true }
@@ -52,13 +63,13 @@ return {
                     symlink_arrow = " ➜ ",
                     glyphs = {
                         git = {
-                            unstaged = "*",
-                            staged = "✓",
-                            unmerged = "&",
-                            renamed = "➜",
-                            deleted = "-",
-                            untracked = "+",
-                            ignored = ""
+                            unstaged = symbols.git.UNSTAGED,
+                            staged = symbols.git.STAGED,
+                            unmerged = symbols.git.UNMERGED,
+                            renamed = symbols.git.RENAMED,
+                            deleted = symbols.git.DELETED,
+                            untracked = symbols.git.UNTRACKED,
+                            ignored = symbols.git.IGNORED
                         }
                     }
                 }
