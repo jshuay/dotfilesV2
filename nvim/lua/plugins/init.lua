@@ -17,4 +17,6 @@ require("lazy").setup({
     require("plugins.treesitter"),
     require("plugins.completion"),
     require("plugins.comment"),
+    require("plugins.neoscroll"),
+    require("plugins.scrollbar"),
 })
