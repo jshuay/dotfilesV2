@@ -19,4 +19,5 @@ require("lazy").setup({
     require("plugins.comment"),
     require("plugins.neoscroll"),
     require("plugins.scrollbar"),
+    require("plugins.git"),
 })
