@@ -22,7 +22,6 @@ return {
                 api.config.mappings.default_on_attach(bufnr)
 
                 keymap.buf_set(bufnr, "n", "v", api.node.open.vertical)
-                keymap.buf_set(bufnr, "n", "<LEADER><LEADER>", "<CMD>NvimTreeFindFileToggle<CR>")
             end,
             git = { ignore = true },
             view = {

@@ -22,4 +22,5 @@ require("lazy").setup({
     require("plugins.git"),
     require("plugins.lualine"),
     require("plugins.telescope"),
+    require("plugins.leap"),
 })

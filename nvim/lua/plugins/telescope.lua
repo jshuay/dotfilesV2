@@ -135,24 +135,24 @@ return {
 
         local keymap = require("keymap")
 
-        keymap.set("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR>")
-        keymap.set("n", "<leader>fF",
-            "<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>")
+        keymap.set("n", "<LEADER>ff", "<CMD>lua require('telescope.builtin').find_files()<CR>")
+        keymap.set("n", "<LEADER>fF",
+            "<CMD>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>")
 
-        keymap.set("n", "<leader>fg",
-            "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args({ prompt_title = 'Live Grep' })<CR>")
-        keymap.set("n", "<leader>fG", "<cmd>lua LIVE_GREP_LITERAL()<CR>")
+        keymap.set("n", "<LEADER>fg",
+            "<CMD>lua require('telescope').extensions.live_grep_args.live_grep_args({ prompt_title = 'Live Grep' })<CR>")
+        keymap.set("n", "<LEADER>fG", "<CMD>lua LIVE_GREP_LITERAL()<CR>")
 
-        keymap.set("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers({ initial_mode = 'normal' })<CR>")
+        keymap.set("n", "<LEADER>fb", "<CMD>lua require('telescope.builtin').buffers({ initial_mode = 'normal' })<CR>")
 
-        keymap.set("n", "<leader>/", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>")
+        keymap.set("n", "<LEADER>/", "<CMD>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>")
 
         keymap.set("n", "gr",
-            "<cmd>lua require('telescope.builtin').lsp_references({ trim_text = true, fname_width = 50 })<CR>")
+            "<CMD>lua require('telescope.builtin').lsp_references({ trim_text = true, fname_width = 50 })<CR>")
 
-        keymap.set("n", "<leader>ss",
-            "<cmd>lua require('telescope.builtin').spell_suggest({ layout_strategy = 'cursor', layout_config = { height = 0.4, width = 0.15 }, initial_mode = 'normal', prompt_title = 'Spell', results_title = '' })<CR>")
+        keymap.set("n", "<LEADER>ss",
+            "<CMD>lua require('telescope.builtin').spell_suggest({ layout_strategy = 'cursor', layout_config = { height = 0.4, width = 0.15 }, initial_mode = 'normal', prompt_title = 'Spell', results_title = '' })<CR>")
 
-        keymap.set("n", "<leader>fh", "<cmd>lua require('telescope.builtin').highlights()<CR>")
+        keymap.set("n", "<LEADER>fh", "<CMD>lua require('telescope.builtin').highlights()<CR>")
     end
 }
