@@ -23,15 +23,15 @@ local buffer_info = function()
             buffer_count = buffer_count + 1
         end
     end
-    return buffer_count .. " B"
+    return buffer_count .. "B"
 end
 
 local col_location = function()
-    return vim.fn.col(".") .. ":" .. vim.fn.col("$") .. " C"
+    return vim.fn.col(".") .. ":" .. vim.fn.col("$") .. "C"
 end
 
 local line_location = function()
-    return vim.fn.line(".") .. ":" .. vim.fn.line("$") .. " L"
+    return vim.fn.line(".") .. ":" .. vim.fn.line("$") .. "L"
 end
 
 local symbols = require("symbols")
