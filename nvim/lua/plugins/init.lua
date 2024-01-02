@@ -21,4 +21,5 @@ require("lazy").setup({
     require("plugins.scrollbar"),
     require("plugins.git"),
     require("plugins.lualine"),
+    require("plugins.telescope"),
 })
