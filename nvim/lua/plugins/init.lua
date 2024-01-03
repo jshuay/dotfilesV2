@@ -24,4 +24,5 @@ require("lazy").setup({
     require("plugins.telescope"),
     require("plugins.leap"),
     require("plugins.indent-blankline"),
+    require("plugins.dressing"),
 })
