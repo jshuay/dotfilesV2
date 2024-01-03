@@ -23,4 +23,5 @@ require("lazy").setup({
     require("plugins.lualine"),
     require("plugins.telescope"),
     require("plugins.leap"),
+    require("plugins.indent-blankline"),
 })
