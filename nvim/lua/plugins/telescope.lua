@@ -122,37 +122,53 @@ return {
 
         telescope.load_extension("fzf")
 
-        LIVE_GREP_LITERAL = function()
+        local keymap = require("keymap")
+
+        keymap.set("n", "<LEADER>ff", function()
+            require("telescope.builtin").find_files()
+        end)
+        keymap.set("n", "<LEADER>fF", function()
+            require("telescope.builtin").find_files({
+                prompt_title = "All Files",
+                no_ignore = true,
+            })
+        end)
+        keymap.set("n", "<LEADER>fg", function()
             telescope.extensions.live_grep_args.live_grep_args({
-                initial_mode = "normal",
-                prompt_title =
-                "Live Grep (Literal)"
+                prompt_title = "Live Grep"
+            })
+        end)
+        keymap.set("n", "<LEADER>fG", function()
+            telescope.extensions.live_grep_args.live_grep_args({
+                prompt_title = "Live Grep (Literal)",
+                initial_mode = "normal"
             })
             local picker = action_state.get_current_picker(vim.api.nvim_get_current_buf())
             picker:set_prompt("-F -- \"\"")
             vim.api.nvim_feedkeys("i", "n", true)
-        end
-
-        local keymap = require("keymap")
-
-        keymap.set("n", "<LEADER>ff", "<CMD>lua require('telescope.builtin').find_files()<CR>")
-        keymap.set("n", "<LEADER>fF",
-            "<CMD>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>")
-
-        keymap.set("n", "<LEADER>fg",
-            "<CMD>lua require('telescope').extensions.live_grep_args.live_grep_args({ prompt_title = 'Live Grep' })<CR>")
-        keymap.set("n", "<LEADER>fG", "<CMD>lua LIVE_GREP_LITERAL()<CR>")
-
-        keymap.set("n", "<LEADER>fb", "<CMD>lua require('telescope.builtin').buffers({ initial_mode = 'normal' })<CR>")
-
-        keymap.set("n", "<LEADER>/", "<CMD>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>")
-
-        keymap.set("n", "gr",
-            "<CMD>lua require('telescope.builtin').lsp_references({ trim_text = true, fname_width = 50 })<CR>")
-
-        keymap.set("n", "<LEADER>ss",
-            "<CMD>lua require('telescope.builtin').spell_suggest({ layout_strategy = 'cursor', layout_config = { height = 0.4, width = 0.15 }, initial_mode = 'normal', prompt_title = 'Spell', results_title = '' })<CR>")
-
-        keymap.set("n", "<LEADER>fh", "<CMD>lua require('telescope.builtin').highlights()<CR>")
+        end)
+        keymap.set("n", "<LEADER>fb", function()
+            require("telescope.builtin").buffers({
+                initial_mode = "normal"
+            })
+        end)
+        keymap.set("n", "<LEADER>/", function()
+            require("telescope.builtin").current_buffer_fuzzy_find()
+        end)
+        keymap.set("n", "gr", function()
+            require("telescope.builtin").lsp_references({
+                trim_text = true,
+                fname_width = 50,
+            })
+        end)
+        keymap.set("n", "<LEADER>ss", function()
+            require("telescope.builtin").spell_suggest(require("telescope.themes").get_dropdown({
+                prompt_title = "Spell",
+                initial_mode = "normal",
+            }))
+        end)
+        keymap.set("n", "<LEADER>fh", function()
+            require("telescope.builtin").highlights()
+        end)
     end
 }
