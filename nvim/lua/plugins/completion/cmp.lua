@@ -57,17 +57,18 @@ return {
             },
             preselect = cmp.PreselectMode.None,
             formatting = {
-                -- fields = { "abbr", "kind" },
-                format = require("lspkind").cmp_format({
-                    with_text = true,
-                    menu = {
+                format = function(entry, vim_item)
+                    local sources = {
                         nvim_lsp = "[Lsp]",
                         nvim_lua = "[Nvim]",
                         buffer = "[Buffer]",
                         path = "[Path]",
                         luasnip = "[Snip]"
                     }
-                })
+                    local item = require("lspkind").cmp_format()(entry, vim_item)
+                    item.menu = sources[entry.source.name]
+                    return item
+                end
             },
             snippet = {
                 expand = function(args)
