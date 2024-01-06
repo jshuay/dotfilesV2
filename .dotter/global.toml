@@ -19,3 +19,6 @@ bin = "~/bin"
 
 [nvim.files]
 nvim = { target = "~/.config/nvim", type = "symbolic" }
+
+[rustfmt.files]
+rustfmt = { target = "~/.config/rustfmt", type = "symbolic" }

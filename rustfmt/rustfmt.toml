@@ -1,0 +1,9 @@
+# https://rust-lang.github.io/rustfmt/?version=v1.6.0
+
+edition = "2021"
+max_width = 120
+newline_style = "Unix"
+fn_params_layout = "Compressed"
+match_block_trailing_comma = true
+merge_derives = false
+use_field_init_shorthand = true
