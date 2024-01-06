@@ -25,4 +25,5 @@ require("lazy").setup({
     require("plugins.leap"),
     require("plugins.indent-blankline"),
     require("plugins.dressing"),
+    require("plugins.oscyank"),
 })
