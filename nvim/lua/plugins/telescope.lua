@@ -165,10 +165,29 @@ return {
             require("telescope.builtin").spell_suggest(require("telescope.themes").get_dropdown({
                 prompt_title = "Spell",
                 initial_mode = "normal",
+                layout_config = {
+                    center = {
+                        anchor = "N",
+                    }
+                }
             }))
         end)
         keymap.set("n", "<LEADER>fh", function()
             require("telescope.builtin").highlights()
+        end)
+        keymap.set("n", "<LEADER>dD", function()
+            require("telescope.builtin").diagnostics(require("telescope.themes").get_dropdown({
+                initial_mode = "normal",
+                -- previewer = false,
+                line_width = 80,
+                layout_config = {
+                    center = {
+                        anchor = "N",
+                        width = 0.95,
+                        prompt_position = "top",
+                    }
+                }
+            }))
         end)
     end
 }
