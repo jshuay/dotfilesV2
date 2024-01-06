@@ -5,6 +5,10 @@ return {
     },
     config = function()
         require("dressing").setup({
+            input = {
+                relative = "editor",
+                prefer_width = 80,
+            },
             select = {
                 telescope = require("telescope.themes").get_dropdown({
                     initial_mode = "normal",
