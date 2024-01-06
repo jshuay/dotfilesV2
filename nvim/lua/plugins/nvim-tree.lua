@@ -51,6 +51,7 @@ return {
             renderer = {
                 indent_markers = { enable = true },
                 group_empty = true,
+                add_trailing = true,
                 icons = {
                     git_placement = "signcolumn",
                     show = {
