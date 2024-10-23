@@ -1,6 +1,7 @@
 add_newline = false
 
 format = """
+$hostname \
 $character\
 $sudo\
 $git_branch\
@@ -13,8 +14,10 @@ format = "[$user]($style)"
 show_always = true
 
 [hostname]
-format = "[$hostname]($style)"
-ssh_only = false
+format = "[$ssh_symbol]($style)"
+ssh_only = true
+ssh_symbol = ""
+style = "bold dimmed blue"
 
 [time]
 disabled = false
