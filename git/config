@@ -1,6 +1,6 @@
 [user]
-    email = "{{git_email}}"
-    name = "{{git_name}}"
+    email = "<GIT_EMAIL_REPLACE>"
+    name = "<GIT_NAME_REPLACE>"
 [init]
     defaultBranch = main
 [core]
