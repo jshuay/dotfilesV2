@@ -1,7 +1,7 @@
 add_newline = false
 
 format = """
-$hostname \
+$hostname\
 $character\
 $sudo\
 $git_branch\
