@@ -23,7 +23,9 @@ return {
 
                 keymap.buf_set(bufnr, "n", "v", api.node.open.vertical)
             end,
-            git = { ignore = true },
+            filters = {
+                git_ignored = true,
+            },
             view = {
                 width = 30,
                 signcolumn = "yes"
@@ -73,6 +75,9 @@ return {
                         }
                     }
                 }
+            },
+            notify = {
+                threshold = vim.log.levels.ERROR
             }
         })
     end,

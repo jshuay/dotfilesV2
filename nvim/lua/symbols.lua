@@ -7,7 +7,7 @@ M.git = {
     RENAMED = "➜",
     DELETED = "-",
     UNTRACKED = "+",
-    IGNORED = "",
+    IGNORED = " ",
 }
 
 M.diagnostics = {

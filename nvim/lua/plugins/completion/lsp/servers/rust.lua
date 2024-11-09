@@ -8,7 +8,7 @@ return {
     settings = {
         ["rust-analyzer"] = {
             assist = {
-                importGranularity = "module",
+                importGranularity = "item",
                 importPrefix = "self"
             },
             cargo = {

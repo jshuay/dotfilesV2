@@ -47,3 +47,7 @@ keymap.set("n", "<LEADER>fmt", "<CMD>lua vim.lsp.buf.format({ async = true })<CR
 
 -- Clear search highlights
 keymap.set("n", "<LEADER>c/", ":noh<CR>")
+
+-- Remap find next/prev keybindings
+keymap.set("n", "<LEADER>[", ",")
+keymap.set("n", "<LEADER>]", ";")
