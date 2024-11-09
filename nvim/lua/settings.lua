@@ -68,7 +68,7 @@ vim.o.showcmd = false
 vim.o.spell = true
 vim.o.spelllang = "en_us"
 vim.o.spellsuggest = "best,9"
-vim.o.spellfile = vim.fn.stdpath("data") .. "/spell/en.utf-8.add"
+vim.o.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 
 -- Set colorcolumn for git commit
 vim.api.nvim_create_autocmd("FileType", {
