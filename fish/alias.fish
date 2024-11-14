@@ -6,7 +6,7 @@ if type -q eza
 end
 
 if type -q peco
-    alias peco "peco --on-cancel error --prompt '>' --layout bottom-up"
+    alias peco "peco --on-cancel error --prompt '>' --layout bottom-up --selection-prefix '>'"
 end
 
 alias wp "cd ~/workplace/"
