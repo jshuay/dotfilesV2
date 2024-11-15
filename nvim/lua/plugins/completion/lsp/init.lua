@@ -9,8 +9,14 @@ return {
         require("plugins.completion.lsp.diagnostics")
 
         local servers = {
-            require("plugins.completion.lsp.servers.rust"),
+            require("plugins.completion.lsp.servers.css"),
+            require("plugins.completion.lsp.servers.html"),
+            require("plugins.completion.lsp.servers.json"),
             require("plugins.completion.lsp.servers.lua"),
+            require("plugins.completion.lsp.servers.rust"),
+            require("plugins.completion.lsp.servers.svelte"),
+            require("plugins.completion.lsp.servers.toml"),
+            require("plugins.completion.lsp.servers.typescript"),
         }
 
         local ensure_installed = {}
@@ -27,12 +33,16 @@ return {
 
         local lspconfig = require("lspconfig")
         for _, server in ipairs(servers) do
-            lspconfig[server.name].setup({
+            local config = {
                 on_attach = server.on_attach,
                 capabilities = server.capabilities,
                 handlers = server.handlers,
                 settings = server.settings
-            })
+            }
+            if server.root_dir ~= nil then
+                config.root_dir = server.root_dir
+            end
+            lspconfig[server.name].setup(config)
         end
     end
 }
