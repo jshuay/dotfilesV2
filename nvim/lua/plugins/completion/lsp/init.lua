@@ -11,10 +11,13 @@ return {
         local servers = {
             require("plugins.completion.lsp.servers.css"),
             require("plugins.completion.lsp.servers.html"),
+            require("plugins.completion.lsp.servers.java"),
             require("plugins.completion.lsp.servers.json"),
             require("plugins.completion.lsp.servers.lua"),
+            require("plugins.completion.lsp.servers.python"),
             require("plugins.completion.lsp.servers.rust"),
             require("plugins.completion.lsp.servers.svelte"),
+            require("plugins.completion.lsp.servers.tailwind"),
             require("plugins.completion.lsp.servers.toml"),
             require("plugins.completion.lsp.servers.typescript"),
         }

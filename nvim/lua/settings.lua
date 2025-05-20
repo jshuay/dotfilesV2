@@ -65,7 +65,7 @@ vim.o.undofile = true
 vim.o.showcmd = false
 
 -- Spellchecker
-vim.o.spell = true
+vim.o.spell = false
 vim.o.spelllang = "en_us"
 vim.o.spellsuggest = "best,9"
 vim.o.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
@@ -85,3 +85,5 @@ vim.o.cursorline = false
 -- Debug logging for LSP
 -- vim.lsp.set_log_level = "trace"
 -- require("vim.lsp.log").set_format_func(vim.inspect)
+
+vim.o.winborder = "rounded"

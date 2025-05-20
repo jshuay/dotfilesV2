@@ -3,6 +3,8 @@ local keymap = require("keymap")
 keymap.set("n", "<LEADER>dd", ":lua vim.diagnostic.open_float()<CR>")
 -- keymap.set("n", "<LEADER>dD", ":lua vim.diagnostic.setloclist()<CR>")
 
+local symbols = require("symbols").diagnostics
+
 vim.diagnostic.config({
     severity_sort = true,
     virtual_text = false,
@@ -16,11 +18,13 @@ vim.diagnostic.config({
             end
             return diagnostic.message
         end
-    }
+    },
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = symbols.ERROR,
+            [vim.diagnostic.severity.WARN] = symbols.WARN,
+            [vim.diagnostic.severity.INFO] = symbols.INFO,
+            [vim.diagnostic.severity.HINT] = symbols.HINT,
+        }
+    },
 })
-
-local symbols = require("symbols").diagnostics
-vim.fn.sign_define("DiagnosticSignError", { text = symbols.ERROR, texthl = "DiagnosticSignError" })
-vim.fn.sign_define("DiagnosticSignWarn", { text = symbols.WARN, texthl = "DiagnosticSignWarn" })
-vim.fn.sign_define("DiagnosticSignInfo", { text = symbols.INFO, texthl = "DiagnosticSignInfo" })
-vim.fn.sign_define("DiagnosticSignHint", { text = symbols.HINT, texthl = "DiagnosticSignHint" })

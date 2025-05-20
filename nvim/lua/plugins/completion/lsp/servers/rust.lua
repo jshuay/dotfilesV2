@@ -9,7 +9,7 @@ return {
         ["rust-analyzer"] = {
             assist = {
                 importGranularity = "item",
-                importPrefix = "self"
+                importPrefix = "crate"
             },
             cargo = {
                 buildScripts = {

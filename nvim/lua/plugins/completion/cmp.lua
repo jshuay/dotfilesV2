@@ -50,7 +50,7 @@ return {
 
         cmp.setup({
             experimental = {
-                ghost_text = true
+                -- ghost_text = true
             },
             completion = {
                 completeopt = "menuone,longest,preview,noselect"
@@ -87,7 +87,7 @@ return {
                 ["<C-Up>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-Space>"] = cmp.mapping(SHOW_CMP, { "i", "c" }),
                 ["<CR>"] = cmp.mapping.confirm({
-                    behavior = cmp.ConfirmBehavior.Replace,
+                    behavior = cmp.ConfirmBehavior.Insert,
                     select = false
                 }),
                 ["<C-u>"] = cmp.mapping.abort()
